@@ -9,7 +9,7 @@ config :eliza_chat_v3, ElizaChatV3Web.Endpoint,
   server: true,
   url:  [host: "35.212.167.138", port: 8080],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  check_origin: ["35.212.167.138"]
+  check_origin: ["http://35.212.167.138:8080"]
 
 # Configures Swoosh API Client
 config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: ElizaChatV3.Finch

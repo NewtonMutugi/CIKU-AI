@@ -7,7 +7,7 @@ import Config
 # before starting your production server.
 config :eliza_chat_v3, ElizaChatV3Web.Endpoint,
   server: true,
-  url:  [host: System.get_env("EXTERNAL_HOSTNAME") || "35.212.167.138", port: 80],
+  url:  [host: "35.212.167.138", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Configures Swoosh API Client

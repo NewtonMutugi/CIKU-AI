@@ -13,7 +13,7 @@ config :eliza_chat_v3,
 
 # Configures the endpoint
 config :eliza_chat_v3, ElizaChatV3Web.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "localhost" || "35.212.167.138"],
   adapter: Phoenix.Endpoint.Cowboy2Adapter,
   render_errors: [
     formats: [html: ElizaChatV3Web.ErrorHTML, json: ElizaChatV3Web.ErrorJSON],

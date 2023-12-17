@@ -16,11 +16,26 @@ defmodule ElizaChatV3Web.LiveChat do
       <input type="submit" value="Submit" class=" phx-submit-loading:opacity-75 rounded-lg bg-zinc-900 hover:bg-zinc-700 py-2 px-3 text-sm font-semibold leading-6 text-white active:text-white/80 " />
     </form>
 
-     <div class="message-container p-4 rounded-md shadow-md">
+     <%!-- <div class="message-container p-4 rounded-md shadow-md">
       <%= for {label, message} <- Enum.zip(Stream.cycle(["Question", "Answer"]), @history) do %>
         <p><strong><%= label %>:</strong> <%= message %></p>
       <% end %>
+    </div> --%>
+
+    <div class="message-container p-4 rounded-md shadow-md">
+      <%= for {label, message} <- Enum.zip(Stream.cycle(["Question", "Answer"]), @history) do %>
+        <div class={if label == "Question", do: "bg-blue-200", else: "bg-green-200"} mb-4 p-2 rounded-md>
+
+          <p class="flex items-center">
+            <span class="mr-2 text-xl">&#x1F4AC;</span> <!-- Replace with your desired icon -->
+            <strong><%= label %>:</strong> <%= message %>
+          </p>
+        </div>
+      <% end %>
     </div>
+
+
+
 
     """
   end

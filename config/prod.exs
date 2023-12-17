@@ -6,6 +6,7 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 config :eliza_chat_v3, ElizaChatV3Web.Endpoint,
+  server: true,
   url:  [host: System.get_env("EXTERNAL_HOSTNAME") || "35.212.167.138", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json"
 

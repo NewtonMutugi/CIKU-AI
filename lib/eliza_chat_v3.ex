@@ -18,7 +18,7 @@ defmodule ElizaChatV3 do
         "messages" => [%{"content" => message}]
       },
       "temperature" => 0.25,
-      "top_k" => 40,5
+      "top_k" => 40,
       "top_p" => 0.95,
       "candidate_count" => 1
     }

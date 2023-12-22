@@ -6,10 +6,12 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 config :eliza_chat_v3, ElizaChatV3Web.Endpoint,
+  http: [port: 4000],
   server: true,
   url:  [host: "cikuai.newtonmutugi.me", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
-  #check_origin: ["http://35.212.167.138:8080"]
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  code_reloader: false,
+  check_origin: ["http://cikuai.newtonmutugi.me/"]
 
 # Configures Swoosh API Client
 config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: ElizaChatV3.Finch

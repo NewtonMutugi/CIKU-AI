@@ -33,7 +33,9 @@ defmodule ElizaChatV3 do
 
         if decoded["filters"] do
           IO.inspect(decoded["filters"], label: "API Response Filters")
-          decoded["filters"] |> Enum.map(& &1["reason"])
+          custom_msg = [%{"reason" => "I don't know how to respond to that 😬. Please ask something else 😊"}]
+          # decoded["filters"] |> Enum.map(& &1["reason"])
+          custom_msg |> Enum.map(& &1["reason"])
         else if decoded["error"] do
           IO.inspect(decoded["error"], label: "API Response Error")
           {:error, decoded["error"]["message"]}

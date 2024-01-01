@@ -35,8 +35,6 @@ defmodule ElizaChatV3Web.LiveChat do
     </div>
 
 
-
-
     """
   end
 

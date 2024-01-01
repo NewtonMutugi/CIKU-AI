@@ -12,8 +12,9 @@ defmodule ElizaChatV3Web.LiveChat do
 
 
 
-      <form phx-submit="submit" class="flex flex-row pb-4  mx-0 sm:px-px w-full fixed bottom-0 justify-center lg:justify-start resize-none overflow-auto" >
-        <textarea name="s" rows= "3" placeholder="Talk to me!😊" class="resize-none w-1/2 mt-2 block rounded-lg text-zinc-900 focus:ring-0 sm:text-sm phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400" />
+      <form phx-submit="submit" class="flex flex-row pb-4  mx-0 sm:px-px w-full fixed bottom-0 justify-start lg:justify-start resize-none overflow-auto" style="bottom: 0px; overflow: auto; width: 100%; position: fixed; margin-left: 0px; margin-right: 0px;  @media (min-width: 1024px) { .lg\:justify-start {    justify-content: flex-start; }} ">
+
+        <textarea name="s" rows= "3" placeholder="Talk to me!😊" class="resize-none w-1/2 mt-2 block rounded-lg text-zinc-900 focus:ring-0 sm:text-sm phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400" style="resize: none; width: 50%" />
         <div class="flex flex-row items-center">
           <input type="submit" value="speak" class=" phx-submit-loading:opacity-75 rounded-lg  h-min bg-zinc-900 hover:bg-zinc-700 py-2 px-3 text-sm font-semibold leading-6 text-white active:text-white/80 "/>
         </div>

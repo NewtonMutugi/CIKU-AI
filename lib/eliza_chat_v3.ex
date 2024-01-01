@@ -22,12 +22,26 @@ defmodule ElizaChatV3 do
       "top_p" => 0.95,
       "candidate_count" => 1
     }
+
+    # Log inputs
+    IO.inspect({:generate_message_input, message, history}, label: "generate_message Debug")
+    IO.inspect({:api_request, url, payload}, label: "api_request Debug")
     case HTTPoison.post(url, Jason.encode!(payload), headers, recv_timeout: 20000) do
       {:ok, %HTTPoison.Response{body: body}} ->
+        IO.inspect(body, label: "API Response Body")
         {:ok, decoded} = Jason.decode(body)
-        decoded["candidates"] |> Enum.map(& &1["content"])
-      {:error, reason} ->
-        {:error, reason}
+
+        if decoded["filters"] do
+          IO.inspect(decoded["filters"], label: "API Response Filters")
+          decoded["filters"] |> Enum.map(& &1["reason"])
+        else if decoded["error"] do
+          IO.inspect(decoded["error"], label: "API Response Error")
+          {:error, decoded["error"]["message"]}
+        else
+          IO.inspect(decoded["candidates"], label: "API Response Candidates")
+          decoded["candidates"] |> Enum.map(& &1["content"])
+        end
+      end
     end
   end
 end

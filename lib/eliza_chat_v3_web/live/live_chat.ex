@@ -38,7 +38,7 @@ defmodule ElizaChatV3Web.LiveChat do
 
           <p class="flex items-center">
             <span class="mr-2 text-xl "><%= FontAwesome.icon("user", type: "regular", class: "h-4 w-4") %></span>
-            <strong><%= label %>:   </strong><br>
+            <strong><%= label %>  </strong><br>
             <p class="px-5"><%= message %></p>
           </p>
         </div>

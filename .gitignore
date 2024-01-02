@@ -32,3 +32,5 @@ eliza_chat_v3-*.tar
 npm-debug.log
 /assets/node_modules/
 
+# Ignore compiled assets.
+/priv/static/assets

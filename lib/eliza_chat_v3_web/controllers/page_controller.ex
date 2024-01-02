@@ -10,7 +10,7 @@ defmodule ElizaChatV3Web.PageController do
   def manifest(conn, _params) do
     conn
     |> put_resp_header("content-type", "application/json")
-    |> send_file(200, "assets/manifest.json")
+    |> send_file(200, "priv/static/manifest.json")
   end
 
   def service_worker(conn, _params) do

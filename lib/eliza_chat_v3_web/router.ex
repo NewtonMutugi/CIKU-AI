@@ -29,6 +29,7 @@ defmodule ElizaChatV3Web.Router do
 
     get "/", PageController, :home
     get "/manifest.json", PageController, :manifest
+    get "/assets/manifest.json", PageController, :manifest
   end
 
   scope "/", ElizaChatV3Web do

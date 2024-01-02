@@ -4,6 +4,7 @@ var urlsToCache = [
   '/assets/app.css',
   '/assets/app.js',
   '/images/Eliza-icon-trans.png',
+  '/images/logo-no-background.png',
 ];
 
 self.addEventListener('install', function (event) {

@@ -33,11 +33,13 @@ defmodule ElizaChatV3Web.LiveChat do
 
     <div class="message-container p-4 rounded-md shadow-md">
       <%= for {label, message} <- Enum.zip(Stream.cycle(["Me", "Ciku"]), @history) do %>
-        <div class={if label == "Question", do: "bg-blue-200", else: "bg-green-200"} mb-4 p-2 rounded-md>
+        <div class={if label == "Me", do: "bg-blue-100 rounded-lg border-solid px-2 pb-2 py-2",
+        else: "bg-green-100 rounded-lg border-solid px-2 py-2"} mb-4>
 
           <p class="flex items-center">
-            <span class="mr-2 text-xl">&#x1F4AC;</span> <!-- Replace with your desired icon -->
-            <strong><%= label %>:</strong><br> <%= message %>
+            <span class="mr-2 text-xl "><%= FontAwesome.icon("user", type: "regular", class: "h-4 w-4") %></span>
+            <strong><%= label %>:   </strong><br>
+            <p class="px-5"><%= message %></p>
           </p>
         </div>
       <% end %>

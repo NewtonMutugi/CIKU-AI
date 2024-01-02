@@ -1,0 +1,27 @@
+{
+  "name": "C.I.K.U",
+  "short_name": "C.I.K.U",
+  "description": "C.I.K.U is a revolutionary mental health AI chat app offering empathetic support and confidential conversations. Using advanced natural language processing, Eliza provides a judgment-free space for users to express their emotions. With therapeutic principles in mind, it delivers personalized insights and coping strategies, fostering mental wellness 24/7. Your trustworthy companion on the journey to improved mental health.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FD4F00",
+  "icons": [
+    {
+      "src": "/images/Eliza-icon-trans.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Eliza-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/Eliza-icon-trans.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

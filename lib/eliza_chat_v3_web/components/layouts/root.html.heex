@@ -4,10 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title suffix=" · Phoenix Framework">
-      <%= assigns[:page_title] || "ElizaChatV3" %>
-    </.live_title>
+    <%!-- <.live_title suffix=" · Phoenix Framework">
+      <%= "C.I.K.U-AI v1" %>
+    </.live_title> --%>
+    <title>C.I.K.U-AI v1 · Phoenix Framework</title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+
+    <link rel="manifest" href={~p"/assets/manifest.json"}>
+    <link rel="apple-touch-icon" href={~p"/images/Eliza-icon-trans.png"} >
+    <link rel="icon" type="image/x-icon" href={~p"/images/Eliza-icon-trans.png"} >
+    <link rel="icon" type="image/png" sizes="512x512" href={~p"/images/Eliza-icon-maskable.png"}>
+
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
     <style>

@@ -17,11 +17,23 @@ defmodule ElizaChatV3Web.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :no_csrf do
+    plug :accepts, ["json"]
+    plug :fetch_session
+    plug :fetch_flash
+    plug :put_secure_browser_headers
+  end
+
   scope "/", ElizaChatV3Web do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/manifest.json", PageController, :manifest
+  end
 
+  scope "/", ElizaChatV3Web do
+    pipe_through :no_csrf
+    get "/service-worker.js", PageController, :service_worker
   end
 
   # Other scopes may use custom stacks.

@@ -33,8 +33,8 @@ defmodule ElizaChatV3Web.LiveChat do
 
     <div class="message-container p-4 rounded-md shadow-md">
       <%= for {label, message} <- Enum.zip(Stream.cycle(["Me", "Ciku"]), @history) do %>
-        <div class={if label == "Me", do: "bg-blue-100 rounded-lg border-solid px-2 pb-2 py-2",
-        else: "bg-green-100 rounded-lg border-solid px-2 py-2"} mb-4>
+        <div class={if label == "Me", do: "bg-blue-200 rounded-lg border-solid px-2 pb-2 py-2",
+        else: "bg-green-200 rounded-lg border-solid px-2 py-2"} mb-4>
 
           <p class="flex items-center">
             <span class="mr-2 text-xl "><%= FontAwesome.icon("user", type: "regular", class: "h-4 w-4") %></span>

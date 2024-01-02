@@ -9,7 +9,13 @@ defmodule ElizaChatV3Web.LiveChat do
      <%!-- <img src={~p"/images/logo-no-background.png"} class="h-auto w-full overflow-hidden object-cover mx-auto" /> --%>
      <img src={~p"/images/logo-no-background.png"} class="h-auto w-full object-cover" />
      <%!-- form-submit flex flex-row w-full fixed bottom-0 items-center resize-none --%>
-
+      <style>
+        @media (min-width: 1024px) {
+           .lg\:justify-start {
+                justify-content: flex-start;
+            }
+        }
+      </style>
       <form phx-submit="submit" class="flex flex-row pb-4  mx-0 sm:px-px w-full fixed bottom-0 justify-center lg:justify-start resize-none overflow-auto" style="bottom: 0px; overflow: auto; width: 100%; position: fixed; margin-left: 0px; margin-right: 0px; ">
 
         <textarea name="s" rows= "3" placeholder="Talk to me!😊" class="resize-none w-1/2 mt-2 block rounded-lg text-zinc-900 focus:ring-0 sm:text-sm phx-no-feedback:border-zinc-300 phx-no-feedback:focus:border-zinc-400 border-zinc-300 focus:border-zinc-400" style="resize: none; width: 50%" />

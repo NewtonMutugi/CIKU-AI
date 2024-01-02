@@ -34,3 +34,4 @@ npm-debug.log
 
 # Ignore compiled assets.
 /priv/static/assets
+/.vscode

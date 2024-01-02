@@ -32,7 +32,7 @@ defmodule ElizaChatV3Web.LiveChat do
     </div> --%>
 
     <div class="message-container p-4 rounded-md shadow-md">
-      <%= for {label, message} <- Enum.zip(Stream.cycle(["Question", "Answer"]), @history) do %>
+      <%= for {label, message} <- Enum.zip(Stream.cycle(["Me", "Ciku"]), @history) do %>
         <div class={if label == "Question", do: "bg-blue-200", else: "bg-green-200"} mb-4 p-2 rounded-md>
 
           <p class="flex items-center">

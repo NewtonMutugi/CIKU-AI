@@ -30,6 +30,3 @@ Visit the deployed site on [`cikuai.newtonmutugi.me`](https://me.newtonmutugi.me
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)

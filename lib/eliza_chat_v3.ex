@@ -46,4 +46,43 @@ defmodule ElizaChatV3 do
       end
     end
   end
+  def send_initial_request(initial_message) do
+    api_key = System.get_env("API_KEY")
+    url = "https://generativelanguage.googleapis.com/v1beta3/models/chat-bison-001:generateMessage?key=#{api_key}"
+    headers = [{"Content-Type", "application/json"}]
+    payload = %{
+      "prompt" => %{
+        "context" => "Hello",
+        "examples" => [],
+        "messages" => [%{"content" => initial_message}]
+      },
+      "temperature" => 0.25,
+      "top_k" => 40,
+      "top_p" => 0.95,
+      "candidate_count" => 1
+    }
+
+    # Log inputs
+    # IO.inspect({:send_initial_request_input, initial_message}, label: "send_initial_request Debug")
+    # IO.inspect({:api_request, url, payload}, label: "api_request Debug")
+    case HTTPoison.post(url, Jason.encode!(payload), headers, recv_timeout: 20000) do
+      {:ok, %HTTPoison.Response{body: body}} ->
+        IO.inspect(body, label: "API Response Body")
+        {:ok, decoded} = Jason.decode(body)
+
+        if decoded["filters"] do
+          IO.inspect(decoded["filters"], label: "API Response Filters")
+          custom_msg = [%{"reason" => "I don't know how to respond to that 😬. Please ask something else 😊"}]
+          # decoded["filters"] |> Enum.map(& &1["reason"])
+          custom_msg |> Enum.map(& &1["reason"])
+        else if decoded["error"] do
+          IO.inspect(decoded["error"], label: "API Response Error")
+          {:error, decoded["error"]["message"]}
+        else
+          IO.inspect(decoded["candidates"], label: "API Response Candidates")
+          decoded["candidates"] |> Enum.map(& &1["content"])
+        end
+      end
+    end
+  end
 end

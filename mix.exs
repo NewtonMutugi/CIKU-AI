@@ -53,7 +53,8 @@ defmodule ElizaChatV3.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
       {:httpoison, "~>2.2.1"},
-      {:ex_fontawesome, "~> 0.7.2"}
+      {:ex_fontawesome, "~> 0.7.2"},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

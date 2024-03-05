@@ -24,7 +24,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Deployed Site
 
-Visit the deployed site on [`cikuai.newtonmutugi.me`](https://me.newtonmutugi.me)
+Visit the deployed site on [`cikuai.newtonmutugi.me`](https://cikuai.newtonmutugi.me)
 
 ## Contributing
 

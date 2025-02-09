@@ -82,12 +82,6 @@ Please ensure your code adheres to the project's coding standards and includes a
 
 ---
 
-## License  
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
-
----
-
 ## Support  
 
 For any questions, issues, or feedback, feel free to reach out by opening an issue on the repository or contacting the maintainer.  

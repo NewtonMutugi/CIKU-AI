@@ -1,32 +1,95 @@
-# CIKU-AI
+# CIKU-AI  
 
-CIKU-AI is a Phoenix application that ...
+**C.I.K.U - Cognitive Interface for Knowledge and Understanding**  
 
-## Prerequisites
+CIKU-AI is a Phoenix-based application designed to provide a conversational chatbot interface, enabling users to discuss their problems in a supportive and interactive environment. 😊  
 
-Before you begin, ensure you have installed the following:
+---
 
-- Elixir
-- Phoenix
-- PostgreSQL
+## Prerequisites  
 
-## Setup
+Before getting started, ensure you have the following installed on your system:  
 
-To start your Phoenix server:
+- **Elixir** (version 1.14 or later)  
+- **Phoenix** (version 1.7 or later)  
+- **PostgreSQL** (version 13 or later)  
 
-1. Clone the repository
-2. Navigate to the project directory: `cd ciku-ai`
-3. Install dependencies with `mix setup`
-4. Set the `DB_USERNAME`, `DB_PASSWORD` and `API_KEY` environment variables
-5. Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+---
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Setup  
 
-## Deployed Site
+Follow these steps to set up and run CIKU-AI locally:  
 
-Visit the deployed site on [`cikuai.newtonmutugi.me`](https://cikuai.newtonmutugi.me)
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/ciku-ai.git
+   ```
 
-## Contributing
+2. **Navigate to the project directory**  
+   ```bash
+   cd ciku-ai
+   ```
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+3. **Install dependencies**  
+   ```bash
+   mix setup
+   ```
 
+4. **Set up environment variables**  
+   Create a `.env` file in the root directory and add the following variables:  
+   ```bash
+   export DB_USERNAME="your_postgres_username"
+   export DB_PASSWORD="your_postgres_password"
+   export API_KEY="your_api_key"
+   ```  
+   Then, load the environment variables:  
+   ```bash
+   source .env
+   ```
+
+5. **Start the Phoenix server**  
+   You can start the server in one of two ways:  
+   - **Standard mode**:  
+     ```bash
+     mix phx.server
+     ```  
+   - **Interactive Elixir mode (IEx)**:  
+     ```bash
+     iex -S mix phx.server
+     ```  
+
+6. **Access the application**  
+   Open your browser and visit [http://localhost:4000](http://localhost:4000).  
+
+---
+
+## Deployed Site  
+
+You can also access the live version of CIKU-AI here:  
+👉 [https://cikuai.newtonmutugi.me](https://cikuai.newtonmutugi.me)  
+
+---
+
+## Contributing  
+
+We welcome contributions from the community! If you'd like to contribute, please follow these steps:  
+
+1. **Fork the repository** and create your branch from `main`.  
+2. **Open an issue** to discuss the changes you'd like to make (especially for major changes).  
+3. **Submit a pull request** with a clear description of your changes.  
+
+Please ensure your code adheres to the project's coding standards and includes appropriate tests.  
+
+---
+
+## License  
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
+
+---
+
+## Support  
+
+For any questions, issues, or feedback, feel free to reach out by opening an issue on the repository or contacting the maintainer.  
+
+Happy coding! 🚀
